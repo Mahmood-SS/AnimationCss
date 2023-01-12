@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+  font-family: cursive;
+  overflow: hidden;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.circular {
+  width: 200px;
+  height: 200px;
+  border: 8px solid black;
+  border-top: 8px solid white;
+  border-radius: 50%;
+  animation: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  /* animation-direction: alternate-reverse; */
+}
+.circular::before {
+  content: "SIUUUU";
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.road {
+  width: 100%;
+  height: 170px;
+  margin-top: 10%;
+  background-color: gray;
+  display: flex;
+  flex-wrap: wrap;
+}
+.sideOne {
+  width: 100%;
+  height: 50%;
+  background-color: gray;
+  border-bottom: 10px dashed white;
+}
+.sideTwo {
+  width: 100%;
+  height: 50%;
+  background-color: gray;
+  margin-top: 2px;
+}
+img {
+  width: 80px;
+  margin-bottom: 60px;
+  height: 60px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.sideOne img {
+  animation: translation 3s linear infinite;
+}
+.sideTwo img {
+  animation: translation2 4s linear infinite;
+}
+
+@keyframes translation {
+  from {
+    transform: translateX(10px);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
+@keyframes translation2 {
+  0% {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(10px);
+  }
+}
